@@ -1,0 +1,50 @@
+.weather-app{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 0;
+}
+.weather-app-container{
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+    color: rgb(135, 135, 135);
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 19px;
+  }
+
+  h6{
+    color: #272142;
+    font-size: 30px;
+    font-weight: 700;
+margin-bottom: 0;
+
+    
+}
+  .temperature{
+    color: rgb(135, 135, 135);
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 19px;
+    
+  }
+  .description{
+    color: rgb(135, 135, 135);
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 19px;
+  }
