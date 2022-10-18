@@ -10,7 +10,11 @@
     max-width: 600px;
     margin: 50px auto;
 }
-
+.card{
+  width: 200px;
+  margin-top: 20px;
+  border: 1px solid gray;
+}
 ul {
     margin: 0;
     padding: 0;
@@ -37,10 +41,16 @@ margin-bottom: 0;
 }
   .temperature{
     color: rgb(135, 135, 135);
-    font-size: 16px;
+    font-size: 45px;
     font-weight: 100;
     line-height: 19px;
     
+  }
+  .units{
+    color: rgb(135, 135, 135);
+    position: relative;
+    top: -24px;
+    font-size: 14px;
   }
   .description{
     color: rgb(135, 135, 135);
