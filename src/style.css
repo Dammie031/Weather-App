@@ -58,4 +58,12 @@ margin-bottom: 0;
     font-weight: 100;
     line-height: 19px;
   }
-  
+  .image1{
+    width: 50px;
+    
+  }
+  .humidity-wind{
+    font-size: large;
+    position: relative;
+    bottom: -50px;
+  }
