@@ -9,6 +9,7 @@
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 <link rel="stylesheet" href="src/style.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -40,22 +41,23 @@
             <div class="card">
   <div class="card-body" >
    
-   <h6> Lagos</h6>
+   <h6 id="city"></h6>
     <br>
-     <span class="temperature">26</span><span class="units">°C | <a href="#">°F</a></span>
+     <span class="temperature" id="temperature"></span><span class="units">°C | <a href="#">°F</a></span>
      
     <br> 
     
-    <span class="description"> Partly Cloudy</span> <img  class="image1" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt="">
+    <span class="description" id="description">Partly Cloudy</span> <img  class="image1" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt="">
 
 </div>
 </div>
 </div>
 <div class="col-6" >
     <div class="humidity-wind">
-    Humidity: 88% 
+    Humidity:<span id="humidity"></span>%
 <br>
-Wind: 5km/h
+Wind: <span id="wind"></span>km/h
+<br>
 </div>
 </div>
 </form>
