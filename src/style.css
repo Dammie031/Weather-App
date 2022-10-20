@@ -15,21 +15,14 @@
   margin-top: 20px;
   border: 1px solid gray;
 }
-ul {
-    margin: 0;
-    padding: 0;
-  }
+
   
-  li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  
+  .date {
     color: rgb(135, 135, 135);
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 19px;
-  }
+    line-height: 1.2;
+    margin-top: 30px;
+}
+  
 
   h6{
     color: #272142;
@@ -68,3 +61,4 @@ margin-bottom: 0;
     position: relative;
     bottom: -50px;
   }
+ 
