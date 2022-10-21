@@ -70,10 +70,20 @@ iconElement.setAttribute(
   iconElement.setAttribute("alt", response.data.condition.description);
 }
 
+function search(city){
+  let apiKey ="5fb800f7a1e3t8a147a4fof6b7c5773d";
+  let apiUrl=`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  
+  axios.get(apiUrl).then(displayTemperature);
+}
+search("Lagos");
+function handleSubmit(event){
+  event.preventDefault();
+  let cityInputElement=document.querySelector("#city-input")
+ search(cityInputElement.value);
+}
 
-let apiKey ="5fb800f7a1e3t8a147a4fof6b7c5773d";
-let city="Lagos";
-let apiUrl=`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 
-axios.get(apiUrl).then(displayTemperature);
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
