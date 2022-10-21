@@ -40,7 +40,7 @@ function formatDate(timestamp){
   let month = months[date.getMonth()];
   console.log(month);
  
-  return `${day}, ${month} ${currentDate}, ${year} </br> Last updated:${hours}:${minutes}`;
+  return `${day}, ${month} ${currentDate}, ${year} </br> Last updated: ${hours}:${minutes}`;
 }
 
 
@@ -49,30 +49,31 @@ function formatDate(timestamp){
 function displayTemperature(response){
     
 let temperatureElement=document.querySelector("#temperature");
-temperatureElement.innerHTML= Math.round(response.data.main.temp);
+temperatureElement.innerHTML= Math.round(response.data.temperature.current);
 let humidityElement=document.querySelector("#humidity");
-humidityElement.innerHTML= response.data.main.humidity
+humidityElement.innerHTML= response.data.temperature.humidity
 let windElement=document.querySelector("#wind");
 windElement.innerHTML= Math.round(response.data.wind.speed);
 
 let cityElement=document.querySelector("#city");
-cityElement.innerHTML=response.data.name;
+cityElement.innerHTML=response.data.city;
 let descriptionElement=document.querySelector("#description");
-descriptionElement.innerHTML=response.data.weather[0].description;
+descriptionElement.innerHTML=response.data.condition.description;
 let dateElement=document.querySelector("#date");
-dateElement.innerHTML=formatDate(response.data.dt * 1000);
+dateElement.innerHTML=formatDate(response.data.time * 1000);
 let iconElement = document.querySelector("#icon");
 iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
 
-let apiKey ="9560ff313b286b0ba47037c9fdaafbe3";
+let apiKey ="5fb800f7a1e3t8a147a4fof6b7c5773d";
 let city="Lagos";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+let apiUrl=`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 console.log(apiUrl);
 
 axios.get(apiUrl).then(displayTemperature);
