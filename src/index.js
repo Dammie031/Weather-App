@@ -9,9 +9,9 @@ function formatDate(timestamp){
     minutes = `0${minutes}`;
   }
   let year = date.getFullYear();
-  console.log(year);
+ 
   let currentDate = date.getDate();
-  console.log(currentDate);
+  
   let days = [
     "Sunday",
     "Monday",
@@ -38,7 +38,7 @@ function formatDate(timestamp){
     "December"
   ];
   let month = months[date.getMonth()];
-  console.log(month);
+ 
  
   return `${day}, ${month} ${currentDate}, ${year} </br> Last updated: ${hours}:${minutes}`;
 }
@@ -74,6 +74,6 @@ iconElement.setAttribute(
 let apiKey ="5fb800f7a1e3t8a147a4fof6b7c5773d";
 let city="Lagos";
 let apiUrl=`https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-console.log(apiUrl);
+
 
 axios.get(apiUrl).then(displayTemperature);
