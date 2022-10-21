@@ -76,7 +76,10 @@ function search(city){
   
   axios.get(apiUrl).then(displayTemperature);
 }
+
+
 search("Lagos");
+
 function handleSubmit(event){
   event.preventDefault();
   let cityInputElement=document.querySelector("#city-input")
@@ -87,3 +90,4 @@ function handleSubmit(event){
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
