@@ -43,11 +43,12 @@ function formatDate(timestamp){
   return `${day}, ${month} ${currentDate}, ${year} </br> Last updated: ${hours}:${minutes}`;
 }
 
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
  
   let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
-  
+
 let forecastHTML = `<div class="row">`;
 
 days.forEach(function (day) {
@@ -73,6 +74,13 @@ forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey ="5fb800f7a1e3t8a147a4fof6b7c5773d";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&unit=metric`;
+console.log(apiUrl);
+axios.get(apiUrl).then(displayForecast);
+}
 
 function displayTemperature(response){
     
@@ -96,6 +104,10 @@ iconElement.setAttribute(
   );
   
   iconElement.setAttribute("alt", response.data.condition.description);
+
+   getForecast(response.data.coordinates);
+    
+  
 }
 
 function search(city){
@@ -107,7 +119,8 @@ function search(city){
 
 
 search("Lagos");
-displayForecast();
+
+
 function handleSubmit(event){
   event.preventDefault();
   let cityInputElement=document.querySelector("#city-input")
