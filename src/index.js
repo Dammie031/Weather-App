@@ -43,7 +43,35 @@ function formatDate(timestamp){
   return `${day}, ${month} ${currentDate}, ${year} </br> Last updated: ${hours}:${minutes}`;
 }
 
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+ 
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  
+let forecastHTML = `<div class="row">`;
 
+days.forEach(function (day) {
+  forecastHTML = forecastHTML +  
+  `
+  <div class="col-2">
+    <div class="weather-forecast-date">${day}</div>
+    <img
+      src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png"
+      alt=""
+      width="42"
+    />
+    <div class="weather-forecast-temperatures">
+      <span class="weather-forecast-temperature-max"> 20° </span>
+      <span class="weather-forecast-temperature-min"> 10° </span>
+    </div>
+ </div>`;
+
+});
+
+
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
 
 
 function displayTemperature(response){
@@ -79,7 +107,7 @@ function search(city){
 
 
 search("Lagos");
-
+displayForecast();
 function handleSubmit(event){
   event.preventDefault();
   let cityInputElement=document.querySelector("#city-input")
