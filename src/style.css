@@ -5,6 +5,7 @@
     border: 1px solid black;
     border-radius: 10px;
     margin-bottom: 0;
+    background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
 }
 .weather-app-container{
     max-width: 600px;
@@ -14,13 +15,16 @@
   width: 200px;
   margin-top: 20px;
   border: 1px solid gray;
+  background:#e4f1fe ;
+  
 }
+
 
   
   .date {
     color: rgb(135, 135, 135);
     line-height: 1.2;
-    margin-top: 30px;
+    margin-top: 50px;
 }
   
 
@@ -29,6 +33,7 @@
     font-size: 30px;
     font-weight: 700;
 margin-bottom: 0;
+
 
     
 }
@@ -91,14 +96,14 @@ margin-bottom: 0;
     padding: 15px 20px;
     
   }
-  #search-form{
-    position: relative;
-    left: 60px;
-    display: inline-block;
-    max-width: 100%;
-  }
   #city-input{
-    position: relative;
-    top: 3px;
+    margin-bottom: 30px;
+    height: 45px;
+    background:#e4f1fe;
   }
-  
+  #search-input{
+    font-size: 16px;
+    font-weight: 700;
+    height: 45px;
+    padding: 10px 0;
+  }
