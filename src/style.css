@@ -19,6 +19,12 @@
   
 }
 
+.card:hover{
+  transition: width 2s, height 2s, transform 2s;
+  width: 200px;
+  height: 200px;
+  transform: rotate(360deg);
+}
 
   
   .date {
