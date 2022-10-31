@@ -14,8 +14,10 @@
 .card{
   width: 200px;
   margin-top: 20px;
-  border: 1px solid gray;
+  border: 1px solid  #5D9FFF;
+  box-shadow: 1px 1px #5D9FFF;
   background:#e4f1fe ;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   
 }
 
