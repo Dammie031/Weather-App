@@ -2,20 +2,25 @@
     max-width: 600px;
     margin: 50px auto;
     padding: 30px;
-    border: 1px solid black;
+    border: none;
+    box-shadow: 0 40px 50px rgb(82 31 73 / 18%); 
     border-radius: 10px;
     margin-bottom: 0;
-    background: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+    background: linear-gradient(181.2deg, rgb(181, 239, 249) 10.5%, rgb(254, 254, 254) 86.8%);
 }
 .weather-app-container{
     max-width: 600px;
     margin: 50px auto;
 }
+
+body{
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
 .card{
   width: 200px;
   margin-top: 20px;
-  border: 1px solid  #5D9FFF;
-  box-shadow: 1px 1px #5D9FFF;
+  
+  box-shadow: 0 10px 20px rgb(82 31 73 / 18%); 
   background:#e4f1fe ;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   
@@ -114,4 +119,5 @@ margin-bottom: 0;
     font-weight: 700;
     height: 45px;
     padding: 10px 0;
+    opacity: 0.8;
   }
